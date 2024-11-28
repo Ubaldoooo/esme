@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #78f8d8;
+}
+
+header {
+  background-color: #5394ad;
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+}
+
+.playas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.cuadro {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Habilita el efecto 3D */
+  cursor: pointer;
+}
+
+.cuadro div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #032b17;
+  border-radius: 10px;
+}
+
+.frontal {
+  background-color: #dfe580;
+  color: rgb(117, 56, 99);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.trasera {
+  background-color: #e4cdba;
+  color: #000000;
+  transform: rotateY(180deg);
+}
+
+.cuadro:hover .frontal {
+  transform: rotateY(180deg);
+}
+
+.cuadro:hover .trasera {
+  transform: rotateY(360deg);
+}
+
+#imagen-playa img {
+  margin-top: 20px;
+  max-width: 300px;
+  border-radius: 10px;
+}
